@@ -1,0 +1,13 @@
+{
+  "name": "makeup-app-backup",
+  "version": "1.0.0",
+  "description": "造型师作品集小程序 - 数据备份脚本",
+  "scripts": {
+    "backup": "node backup.js",
+    "restore": "node restore.js",
+    "restore:full": "set SYNC_MODE=full && node restore.js"
+  },
+  "dependencies": {
+    "wx-server-sdk": "^2.6.3"
+  }
+}
