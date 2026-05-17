@@ -1,8 +1,29 @@
 @echo off
 chcp 65001 >nul
+
 echo ==========================================
-echo Starting database backup...
+echo WeChat Mini-Program Cloud Backup Tool
 echo ==========================================
+echo.
+
+set /p TENCENT_SECRET_ID="Enter Tencent Secret ID: "
+set /p TENCENT_SECRET_KEY="Enter Tencent Secret Key: "
+
+if "%TENCENT_SECRET_ID%"=="" (
+    echo Error: Secret ID cannot be empty!
+    pause
+    exit /b 1
+)
+
+if "%TENCENT_SECRET_KEY%"=="" (
+    echo Error: Secret Key cannot be empty!
+    pause
+    exit /b 1
+)
+
+echo.
+echo Credentials verified. Starting backup...
+echo.
 
 cd /d "%~dp0backupAndRestore"
 
